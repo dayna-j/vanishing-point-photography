@@ -1,0 +1,41 @@
+/*
+COLORS:
+
+Light green:  #7ed56f
+Medium green: #55c57a
+Dark green:   #28b485
+
+light yellow: #fff0bd
+medium yellow:#ffdb6e
+dark yellow:  #ba9b00
+
+
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        #fff0bd3a,#ba9b00c5),
+        url('https://pixabay.com/get/ea3db00621f4003ed1534705fb094197e171e0dc1eac104491f3c47daeecbdb1/drone-3819901_1920.jpg');
+        /* url('https://pixabay.com/get/e83db0092df4073ed1534705fb094197e171e0dc1eac104491f3c47da1e8b6b8/drone-1816506_1920.jpg'); */
+    background-size: cover;
+    background-position: top;
+
+    clip-path: polygon(0 0, 100% 0%, 100% 76%, 0% 100%);
+}
