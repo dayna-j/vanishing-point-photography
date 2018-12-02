@@ -1,12 +1,4 @@
-/*
-COLORS:
-light yellow: #fff0bd
-medium yellow:#ffdb6e
-dark yellow:  #ba9b00
-*/
-*,
-*::after,
-*::before {
+*, *::after, *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -30,11 +22,11 @@ body {
           box-sizing: border-box;
 }
 
-header {
+.header {
   position: relative;
   height: 95vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#fff0bd3a), to(#ba9b00c5)), url("https://pixabay.com/get/ea3db00621f4003ed1534705fb094197e171e0dc1eac104491f3c67ba3ecbdb1/drone-3819901_1920.jpg");
-  background-image: linear-gradient(to right bottom, #fff0bd3a, #ba9b00c5), url("https://pixabay.com/get/ea3db00621f4003ed1534705fb094197e171e0dc1eac104491f3c67ba3ecbdb1/drone-3819901_1920.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#fff0bd3a), to(#ba9b00c5)), url("https://pixabay.com/get/ea3db00621f4003ed1534705fb094197e171e0dc1eac104491f3c67ea5edb3b1/drone-3819901_1920.jpg");
+  background-image: linear-gradient(to right bottom, #fff0bd3a, #ba9b00c5), url("https://pixabay.com/get/ea3db00621f4003ed1534705fb094197e171e0dc1eac104491f3c67ea5edb3b1/drone-3819901_1920.jpg");
   /* url('https://pixabay.com/get/e83db0092df4073ed1534705fb094197e171e0dc1eac104491f3c47da1e8b6b8/drone-1816506_1920.jpg'); */
   /* url('https://pixabay.com/get/eb30b60b28f4073ed1534705fb094197e171e0dc1eac104491f3c47ca1edb4b1/mountain-2574006_1920.jpg'); */
   background-size: cover;
@@ -57,7 +49,6 @@ header {
   position: absolute;
   top: 40%;
   left: 50%;
-  /* background-color: red; */
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
@@ -202,8 +193,7 @@ header {
   }
 }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -222,6 +212,12 @@ header {
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
+.btn:hover::after {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  opacity: 0;
+}
+
 .btn:active {
   -webkit-transform: translateY(-0.5px);
           transform: translateY(-0.5px);
@@ -232,6 +228,10 @@ header {
 .btn--white {
   background-color: #fff;
   color: #777;
+}
+
+.btn--white::after {
+  background-color: #fff;
 }
 
 .btn::after {
@@ -246,16 +246,6 @@ header {
   z-index: -1;
   -webkit-transition: all .4s;
   transition: all .4s;
-}
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  opacity: 0;
 }
 
 .btn--animated {

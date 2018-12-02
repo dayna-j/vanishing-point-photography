@@ -1,11 +1,15 @@
-@import 'base/base';
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-$color-primary: #ffdb6e;
-$color-primary-light: #fff0bd;
-$color-primary-dark: #ba9b00;
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-$color-grey-dark: #777;
-$color-white: #fff
+@import "pages/home";
+
+
 
 
 *,*::after,*::before {
@@ -30,13 +34,13 @@ body {
     box-sizing: border-box;
 }
 
-header {
+.header {
     position: relative;
     height: 95vh;
     background-image: linear-gradient(
         to right bottom,
         #fff0bd3a,#ba9b00c5),
-        url('https://pixabay.com/get/ea3db00621f4003ed1534705fb094197e171e0dc1eac104491f3c67ba3ecbdb1/drone-3819901_1920.jpg');
+        url('https://pixabay.com/get/ea3db00621f4003ed1534705fb094197e171e0dc1eac104491f3c67ea5edb3b1/drone-3819901_1920.jpg');
         /* url('https://pixabay.com/get/e83db0092df4073ed1534705fb094197e171e0dc1eac104491f3c47da1e8b6b8/drone-1816506_1920.jpg'); */
         /* url('https://pixabay.com/get/eb30b60b28f4073ed1534705fb094197e171e0dc1eac104491f3c47ca1edb4b1/mountain-2574006_1920.jpg'); */
     background-size: cover;
@@ -57,7 +61,7 @@ header {
         position: absolute;
         top: 40%;
         left: 50%;
-        /* background-color: red; */
+        // background-color: red;
         transform: translate(-50%,-50%);
         text-align: center;
     }
