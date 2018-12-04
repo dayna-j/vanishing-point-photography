@@ -1,4 +1,4 @@
-.grid-container {
+.section-about .grid-container {
     // display: flex;
     // justify-content: center;
     // align-items: center;
@@ -19,6 +19,20 @@
             // flex: 1;
             // background-color: pink;
             width: 35%;
+        }
+    }
+}
+
+.section-features .grid-container {
+    // background-color: chocolate;
+    width: 100%;
+    .row {
+        display: flex;
+        // flex: 1;
+        justify-content: space-around;
+        .col {
+            width: 20%;
+
         }
     }
 }

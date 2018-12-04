@@ -346,12 +346,39 @@ body {
           transform: scale(0.95);
 }
 
-.grid-container {
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.feature-box__icon {
+  display: inline-block;
+  font-size: 6rem;
+  margin-bottom: .5rem;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.feature-box:hover {
+  -webkit-transform: translateY(-1.5rem) scale(1.03);
+          transform: translateY(-1.5rem) scale(1.03);
+}
+
+.section-about .grid-container {
   width: 100%;
   max-width: 114rem;
 }
 
-.grid-container .row {
+.section-about .grid-container .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,8 +386,24 @@ body {
       justify-content: space-around;
 }
 
-.grid-container .row .col {
+.section-about .grid-container .row .col {
   width: 35%;
+}
+
+.section-features .grid-container {
+  width: 100%;
+}
+
+.section-features .grid-container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.section-features .grid-container .row .col {
+  width: 20%;
 }
 
 .header {
@@ -399,5 +442,20 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh;
+}
+
+.section-features {
+  margin-top: -20vh;
+  padding: 20rem 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#fff0bd3a), to(#ba9b00c5)), url("/images/city-21260_1280.jpg");
+  background-image: linear-gradient(to right bottom, #fff0bd3a, #ba9b00c5), url("/images/city-21260_1280.jpg");
+  background-size: cover;
+  -webkit-transform: skewY(-7deg);
+          transform: skewY(-7deg);
+}
+
+.section-features > * {
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
 }
 /*# sourceMappingURL=main.css.map */

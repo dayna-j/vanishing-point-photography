@@ -3,3 +3,21 @@
     padding: 25rem 0;
     margin-top: -20vh;
 }
+
+.section-features {
+    margin-top: -20vh;
+    padding: 20rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        #fff0bd3a,#ba9b00c5),
+        url('/images/city-21260_1280.jpg');
+        background-size: cover;
+        // background-position: top;
+        // -webkit-clip-path: polygon(0 40%, 100% 0%, 100% 60%, 0% 100%);
+
+        // margin-top: -10rem;
+        transform: skewY(-7deg);
+        & > * {
+            transform: skewY(7deg);
+        }
+}
