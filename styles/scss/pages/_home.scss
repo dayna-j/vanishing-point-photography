@@ -15,9 +15,15 @@
         // background-position: top;
         // -webkit-clip-path: polygon(0 40%, 100% 0%, 100% 60%, 0% 100%);
 
-        // margin-top: -10rem;
+        margin-top: -10rem;
         transform: skewY(-7deg);
         & > * {
             transform: skewY(7deg);
         }
+}
+
+.section-tours {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0 50rem 0;
+    margin-top: -10rem;
 }
