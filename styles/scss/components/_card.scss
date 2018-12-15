@@ -1,7 +1,7 @@
 .card {
     position: relative;
     perspective: 150rem;
-    height: 50rem;
+    height: 52rem;
     
 
     // -moz-perspective: 150rem;
@@ -14,9 +14,8 @@
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
-        color: #fff;
-        font-size: 2rem;
-        height: 50rem;
+        overflow: hidden;
+        height: 52rem;
         transition: all 1.5s ease;
         backface-visibility: hidden;
         &--front {
@@ -41,8 +40,10 @@
     // FRONT SIDE STYLING
     &__picture {
         background-size: cover;
+        background-position: top center;
         height: 23rem;
         background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
                 url('/images/ginkgo-3758236_1920.jpg');
@@ -59,4 +60,52 @@
 
         }
     }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+
+        // background-image: black;
+        &--1 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-secondary-light, .70), 
+            rgba($color-secondary-dark, .70));
+            
+            
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+        width: 80%;
+        margin: 0 auto;
+        ul {
+            margin: 0 auto;
+            list-style: none;
+            width: 80%;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #eee;
+                }
+            }
+        }
+    }
+
 }

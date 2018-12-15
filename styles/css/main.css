@@ -378,7 +378,7 @@ body {
   position: relative;
   -webkit-perspective: 150rem;
           perspective: 150rem;
-  height: 50rem;
+  height: 52rem;
 }
 
 .card__side {
@@ -389,9 +389,8 @@ body {
   border-radius: 3px;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  color: #fff;
-  font-size: 2rem;
-  height: 50rem;
+  overflow: hidden;
+  height: 52rem;
   -webkit-transition: all 1.5s ease;
   transition: all 1.5s ease;
   -webkit-backface-visibility: hidden;
@@ -424,8 +423,11 @@ body {
 
 .card__picture {
   background-size: cover;
+  background-position: top center;
   height: 23rem;
   background-blend-mode: screen;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
 .card__picture--1 {
@@ -439,6 +441,51 @@ body {
 
 .card__picture--3 {
   background-image: url("/images/ginkgo-3758236_1920.jpg");
+}
+
+.card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  text-align: right;
+  width: 75%;
+}
+
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+
+.card__heading-span--1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(77, 126, 164, 0.7)), to(rgba(28, 82, 124, 0.7)));
+  background-image: linear-gradient(to right bottom, rgba(77, 126, 164, 0.7), rgba(28, 82, 124, 0.7));
+}
+
+.card__details {
+  padding: 3rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card__details ul {
+  margin: 0 auto;
+  list-style: none;
+  width: 80%;
+}
+
+.card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
 }
 
 .section-about .grid-container {
