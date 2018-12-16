@@ -23,16 +23,16 @@
             transform: rotateY(180deg);
             &-1 {
                 background: 
-                linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+                linear-gradient(to right bottom, darken($color-primary-light, 8), $color-primary-dark);
                 // color: purple;
             }
             &-2 {
                 background: 
-                linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+                linear-gradient(to right bottom, darken($color-primary-light, 8), $color-primary-dark);
             }
             &-3 {
                 background: 
-                linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+                linear-gradient(to right bottom, darken($color-primary-light, 8), $color-primary-dark);
             }
         }
 
