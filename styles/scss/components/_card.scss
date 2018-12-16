@@ -2,8 +2,6 @@
     position: relative;
     perspective: 150rem;
     height: 52rem;
-    
-
     // -moz-perspective: 150rem;
     &__side {
         position: absolute;
@@ -16,17 +14,25 @@
 
         overflow: hidden;
         height: 52rem;
-        transition: all 1.5s ease;
+        transition: all .7s ease;
         backface-visibility: hidden;
         &--front {
             background-color: $color-white;
         }
         &--back {
             transform: rotateY(180deg);
-
             &-1 {
-                background: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+                background: 
+                linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
                 // color: purple;
+            }
+            &-2 {
+                background: 
+                linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+            &-3 {
+                background: 
+                linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
             }
         }
 
@@ -42,22 +48,30 @@
         background-size: cover;
         background-position: top center;
         height: 23rem;
-        background-blend-mode: screen;
+        background-blend-mode: multiply;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
         &--1 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+            background-image: 
+                linear-gradient(to right bottom, 
+                $color-primary-light,
+                $color-primary-dark),
                 url('/images/ginkgo-3758236_1920.jpg');
-
         }
-
         &--2 {
-            background-image: url('/images/ginkgo-3758236_1920.jpg');
-
+            background-image:  
+            linear-gradient(to right bottom, 
+            $color-primary-light,
+            $color-primary-dark),
+            url('/images/ginkgo-3758236_1920.jpg');
         }
-
         &--3 {
-            background-image: url('/images/ginkgo-3758236_1920.jpg');
-
+            background-image:  
+            linear-gradient(to right bottom, 
+            $color-primary-light,
+            $color-primary-dark),
+            url('/images/ginkgo-3758236_1920.jpg');
         }
     }
 
@@ -80,22 +94,30 @@
         // background-image: black;
         &--1 {
             background-image: linear-gradient(to right bottom, 
-            rgba($color-secondary-light, .70), 
-            rgba($color-secondary-dark, .70));
-            
-            
+            rgba($color-primary-light, .70), 
+            rgba($color-primary-dark, .70));
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-primary-light, .70), 
+            rgba($color-primary-dark, .70));
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-primary-light, .70), 
+            rgba($color-primary-dark, .70));    
         }
     }
 
     &__details {
         padding: 3rem;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
+        // background-color: red;
         ul {
             margin: 0 auto;
             list-style: none;
             width: 80%;
-
             li {
                 text-align: center;
                 font-size: 1.5rem;
@@ -108,4 +130,28 @@
         }
     }
 
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        margin-bottom: 8rem;
+        color: $color-white;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
 }

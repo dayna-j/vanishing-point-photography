@@ -215,6 +215,10 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -253,6 +257,16 @@ body {
 }
 
 .btn--white::after {
+  background-color: #fff;
+}
+
+.btn--primary {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffe48a), to(#ffdb6e));
+  background-image: linear-gradient(to right bottom, #ffe48a, #ffdb6e);
+  color: #777;
+}
+
+.btn--primary::after {
   background-color: #fff;
 }
 
@@ -391,8 +405,8 @@ body {
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   overflow: hidden;
   height: 52rem;
-  -webkit-transition: all 1.5s ease;
-  transition: all 1.5s ease;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -407,8 +421,18 @@ body {
 }
 
 .card__side--back-1 {
-  background: -webkit-gradient(linear, left top, right bottom, from(#4D7EA4), to(#1C527C));
-  background: linear-gradient(to right bottom, #4D7EA4, #1C527C);
+  background: -webkit-gradient(linear, left top, right bottom, from(#fff0bd), to(#ba9b00));
+  background: linear-gradient(to right bottom, #fff0bd, #ba9b00);
+}
+
+.card__side--back-2 {
+  background: -webkit-gradient(linear, left top, right bottom, from(#fff0bd), to(#ba9b00));
+  background: linear-gradient(to right bottom, #fff0bd, #ba9b00);
+}
+
+.card__side--back-3 {
+  background: -webkit-gradient(linear, left top, right bottom, from(#fff0bd), to(#ba9b00));
+  background: linear-gradient(to right bottom, #fff0bd, #ba9b00);
 }
 
 .card:hover .card__side--front {
@@ -425,22 +449,26 @@ body {
   background-size: cover;
   background-position: top center;
   height: 23rem;
-  background-blend-mode: screen;
+  background-blend-mode: multiply;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .card__picture--1 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#4D7EA4), to(#1C527C)), url("/images/ginkgo-3758236_1920.jpg");
-  background-image: linear-gradient(to right bottom, #4D7EA4, #1C527C), url("/images/ginkgo-3758236_1920.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#fff0bd), to(#ba9b00)), url("/images/ginkgo-3758236_1920.jpg");
+  background-image: linear-gradient(to right bottom, #fff0bd, #ba9b00), url("/images/ginkgo-3758236_1920.jpg");
 }
 
 .card__picture--2 {
-  background-image: url("/images/ginkgo-3758236_1920.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#fff0bd), to(#ba9b00)), url("/images/ginkgo-3758236_1920.jpg");
+  background-image: linear-gradient(to right bottom, #fff0bd, #ba9b00), url("/images/ginkgo-3758236_1920.jpg");
 }
 
 .card__picture--3 {
-  background-image: url("/images/ginkgo-3758236_1920.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#fff0bd), to(#ba9b00)), url("/images/ginkgo-3758236_1920.jpg");
+  background-image: linear-gradient(to right bottom, #fff0bd, #ba9b00), url("/images/ginkgo-3758236_1920.jpg");
 }
 
 .card__heading {
@@ -462,13 +490,23 @@ body {
 }
 
 .card__heading-span--1 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(77, 126, 164, 0.7)), to(rgba(28, 82, 124, 0.7)));
-  background-image: linear-gradient(to right bottom, rgba(77, 126, 164, 0.7), rgba(28, 82, 124, 0.7));
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 240, 189, 0.7)), to(rgba(186, 155, 0, 0.7)));
+  background-image: linear-gradient(to right bottom, rgba(255, 240, 189, 0.7), rgba(186, 155, 0, 0.7));
+}
+
+.card__heading-span--2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 240, 189, 0.7)), to(rgba(186, 155, 0, 0.7)));
+  background-image: linear-gradient(to right bottom, rgba(255, 240, 189, 0.7), rgba(186, 155, 0, 0.7));
+}
+
+.card__heading-span--3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 240, 189, 0.7)), to(rgba(186, 155, 0, 0.7)));
+  background-image: linear-gradient(to right bottom, rgba(255, 240, 189, 0.7), rgba(186, 155, 0, 0.7));
 }
 
 .card__details {
   padding: 3rem;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -486,6 +524,32 @@ body {
 
 .card__details ul li:not(:last-child) {
   border-bottom: 1px solid #eee;
+}
+
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+
+.card__price-box {
+  text-align: center;
+  margin-bottom: 8rem;
+  color: #fff;
+}
+
+.card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.card__price-value {
+  font-size: 6rem;
+  font-weight: 100;
 }
 
 .section-about .grid-container {
@@ -591,7 +655,6 @@ body {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#fff0bd3a), to(#ba9b00c5)), url("/images/city-21260_1280.jpg");
   background-image: linear-gradient(to right bottom, #fff0bd3a, #ba9b00c5), url("/images/city-21260_1280.jpg");
   background-size: cover;
-  margin-top: -10rem;
   -webkit-transform: skewY(-7deg);
           transform: skewY(-7deg);
 }
@@ -603,7 +666,7 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
-  margin-top: -10rem;
+  padding: 25rem 0 15rem 0;
+  margin-top: -12rem;
 }
 /*# sourceMappingURL=main.css.map */
