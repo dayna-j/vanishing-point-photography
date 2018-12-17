@@ -1,3 +1,9 @@
+.row {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
 .section-about .grid-container {
     // display: flex;
     // justify-content: center;
@@ -47,8 +53,16 @@
 
 .section-stories {
     .row {
+
         // margin: 0 auto;
         // background-color: red;
         margin: 10rem;
     }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
