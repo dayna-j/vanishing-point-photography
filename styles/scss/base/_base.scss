@@ -8,10 +8,27 @@
 html {
     // This defines 1rem of measurement
     font-size: 62.5%;
+
+    @include responsive(tablet-landscape) { // width < 1200?
+        font-size: 56.25%;
+    }
+
+    @include responsive(tablet-portrait) { // width < 600??
+        font-size: 50%;
+    }
+
+    @include responsive(phone) { // width < 600??
+        font-size: 30%; //
+    }
+    
+    @include responsive(large-desktop) { // width >= 1800??
+        font-size: 75%;
+    }
 }
 
 body {
     box-sizing: border-box;
     // background-color: #101522;
-    // background-color: #0a101fe8;
+    background-color: #0a101fe8;
+    
 }
