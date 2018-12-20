@@ -14,11 +14,10 @@
 // Note:  Media Queries are not effected by settings on the root
 // element, so REMs do not work there.
 
-
-
 // 1em = 16px
 
-// These are all 
+// This project uses a "desktop-first" approach.  Breakpoints are defined by
+// max-width, targeting progressively smaller screen sizes.  
 
 @mixin responsive($breakpoint) {
     @if $breakpoint == phone {

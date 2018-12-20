@@ -13,7 +13,7 @@ html {
         font-size: 56.25%;
     }
 
-    @include responsive(tablet-portrait) { // width < 600??
+    @include responsive(tablet-portrait) { // width < 900??
         font-size: 50%;
     }
 
@@ -28,7 +28,12 @@ html {
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
     // background-color: #101522;
     background-color: #0a101fe8;
     
+    @include responsive(tablet-portrait) { // width < 900??
+        padding: 0;
+    }
+
 }
